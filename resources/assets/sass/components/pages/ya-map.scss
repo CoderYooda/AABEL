@@ -1,0 +1,90 @@
+// === YANDEX MAP ===
+.ya-baloon {
+    &__title {
+        color: $primary;
+        font-size: 25px;
+        // text-align: center;
+    }
+
+    &__subtitle {
+        margin-top: 5px;
+        font-size: 12px;
+    }
+}
+
+.ya-hint {
+    position: relative;
+    left: -10px;
+    display: inline-block;
+    padding: 20px;
+    text-align: center;
+    vertical-align: middle;
+    background-color: $dark;
+    border: 1px solid #CDB7B5;
+    border-radius: 20px;
+    box-shadow: 0 0 10px $dark, inset 0 0 2px $white;
+
+    &__icon {
+        width: 50px;
+
+        svg {
+            width: 100px;
+            height: auto;
+
+            path {
+                fill: $white;
+            }
+        }
+    }
+
+    &__text {
+        @include font($white, 10px, 15px, 400);
+    }
+}
+
+.ymaps-2-1-79-balloon {
+    padding: 0;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 10px $dark !important;
+
+    &.ymaps-2-1-79-balloon_layout_panel {
+        border-radius: 0;
+    }
+}
+
+.ya-baloon {
+    &__icon {
+        width: 50px;
+        height: auto;
+
+        svg {
+            width: 100px;
+            height: auto;
+
+            path {
+                fill: $dark;
+            }
+        }
+    }
+
+    &__contact {
+        @include font($dark, 10px, 15px, 400, 'Arial');
+
+        span:nth-child(1) {
+            font-weight: 700;
+        }
+    }
+
+    &__footer {
+        @include font($primary, 12px, 15px, 700);
+    }
+}
+
+.ymaps-2-1-79-map-copyrights-promo {
+    // display: none;
+}
+
+.ymaps-2-1-79-copyright {
+    // display: none !important;
+}

@@ -14,5 +14,12 @@ class ExampleController extends Controller
         //
     }
 
-    //
+    public function index()
+    {
+        $blogs = [
+            'test' => 'Название'
+        ];
+
+        return view('index', ['blogs' => $blogs]);
+    }
 }
