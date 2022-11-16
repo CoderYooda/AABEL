@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,3 +13,6 @@
     <div id="app"></div>
 </body>
 </html>
+=======
+тут JS магия
+>>>>>>> 080c708ab05629330e7193b76b4ef2abee3111a9
