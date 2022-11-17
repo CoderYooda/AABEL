@@ -14,7 +14,8 @@
     </header>
 
     <main>
-        awd
+        <h2>Блоги</h2>
+        {!!  \App\Http\Controllers\BlogController::getRandom(3) !!}
     </main>
 
     <footer class="main-footer">
