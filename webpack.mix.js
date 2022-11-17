@@ -1,14 +1,17 @@
 let mix = require('laravel-mix');
 
-mix.ts('resources/assets/ts/app.ts', 'public/js/app.js')
-    .sass('resources/assets/sass/app.scss', 'css').setPublicPath('public');
-    
-// mix.combine('public/js', 'app.js');
-// mix.babel('public/js/app.js');
+// главный сайт
+mix.ts('resources/public/ts/app.ts', 'js/main').setPublicPath('public')
+    .sass('resources/public/sass/app.scss', 'css/main').setPublicPath('public');
 
-mix.copy('resources/assets/images', 'public/images');
-mix.copy('resources/assets/icons', 'public/icons');
-mix.copy('resources/assets/fonts', 'public/fonts');
+// админка
+mix.js('resources/admin/js/app.js', 'js/admin').vue()
+    .sass('resources/admin/scss/app.scss', 'css/admin');
+
+// assets    
+mix.copyDirectory('resources/assets/images', 'public/images');
+mix.copyDirectory('resources/assets/icons', 'public/icons');
+mix.copyDirectory('resources/assets/fonts', 'public/fonts');
 
 if(mix.inProduction() ) {
     mix.version();
