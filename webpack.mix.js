@@ -1,7 +1,7 @@
 let mix = require('laravel-mix');
 
 mix.ts('resources/assets/ts/app.ts', 'public/js/app.js')
-    .sass('resources/assets/sass/app.scss', 'css').setPublicPath('public')
+    .sass('resources/assets/sass/app.scss', 'css').setPublicPath('public');
     
 // mix.combine('public/js', 'app.js');
 // mix.babel('public/js/app.js');
