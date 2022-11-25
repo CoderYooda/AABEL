@@ -1,16 +1,22 @@
 <template lang="">
-    <div class="app">
-        
-        <router-view></router-view>
-    </div>
+    <component :is="layout"></component>
 </template>
+
 <script>
-// import '../scss/app.scss'
+import Empty from './layouts/Empty.vue';
+import Main from './layouts/Main.vue';
 
 export default {
     name: 'app',
     components: {
-        
+        Empty,
+        Main,
+    },
+
+    computed: {
+        layout() {
+            return this.$route.meta.layout || 'Empty'; 
+        }
     }
 }
 </script>

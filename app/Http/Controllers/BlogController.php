@@ -35,7 +35,7 @@ class BlogController extends Controller
 
     public function get()
     {
-        $blogs = Blog::paginate(1);
+        $blogs = Blog::paginate(request('per_page') ?? 10);
 
         return request()->wantsJson() ? $blogs->toJson() : view('blog.list')->with('blogs', $blogs);
     }
@@ -74,9 +74,10 @@ class BlogController extends Controller
             $extension = request()->file('image')->getClientOriginalExtension();
             $fileStore = $file . '_' . time() . '.' . $extension;
             $path = request()->file('image')->storeAs('photos', $fileStore);
+            $validated = array_merge($validated, ['image' => $path]);
         }
 
-        Blog::whereId(request('id'))->update(array_merge($validated, ['image' => $path]));
+        Blog::whereId(request('id'))->update($validated);
 
         return response()->json([
             'status' => 'OK',

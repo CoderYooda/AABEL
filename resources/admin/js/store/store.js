@@ -1,4 +1,6 @@
 import { createStore } from 'vuex';
+import auth from './modules/auth/auth';
+import blog from './modules/blog/blog';
 
 export default createStore({
   state: {
@@ -10,10 +12,8 @@ export default createStore({
   actions: {
   },
   modules: {
-    // alert,
-    // course,
-    // knowledge,
-    // community_analytics,
+    auth,
+    blog
 }
 })
 

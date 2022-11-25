@@ -1,0 +1,16 @@
+.blog {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    &__title {
+        @include font($dark, 40px, 40px, 700);
+    }
+
+    &__articles {
+        margin-top: 30px;
+    }
+
+    &__article {
+        margin-top: 30px;
+    }
+}

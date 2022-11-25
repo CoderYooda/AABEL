@@ -1,25 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="css/main/app.css" rel="stylesheet">
-    <script src="js/main/app.js" defer></script>
-</head>
-<body data-component="Main">
-    <header class="main-header">
-        <div class="container"></div>
-    </header>
+@extends('layouts.app')
 
-    <main>
-        <h2>Блоги</h2>
+@section('content')
+<section data-component="Main">
+    <h2>Блоги</h2>
+    
+    <div
+        id="slider"
+        class="portfolio__slider swiper"
+    >
         {!!  \App\Http\Controllers\BlogController::getRandom(3) !!}
-    </main>
+        
+        <!-- Buttons -->
+        <div class="portfolio__buttons">
+            <button
+                class="portfolio__button portfolio__button-prev swiper-button-prev"
+                aria-label="Предыдущий слайд"    
+            ></button>
+            
+            <button
+                class="portfolio__button portfolio__button-next swiper-button-next"
+                aria-label="Следующий слайд"    
+            ></button>
+        </div>
+    </div>
 
-    <footer class="main-footer">
-        <div class="container"></div>
-    </footer>
-</body>
-</html>
+</section>
+
+@endsection
+
+
+
+   
