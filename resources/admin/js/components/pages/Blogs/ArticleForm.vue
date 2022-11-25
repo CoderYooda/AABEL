@@ -34,9 +34,23 @@
             :error="isError('seo_description')"
         />
 
-        <radio-button />        
+        <div class="article__sex">
+            <radio-sex
+                id="male"
+                value="1"
+                sex="male"
+                v-model="formData.is_male"
+            />
+            
+            <radio-sex
+                id="female"
+                value="0"
+                sex="female"
+                v-model="formData.is_male"
+            />
+        </div>
 
-        <upload-file
+        <upload-image
             :imageUrl="formData.image ? `/storage/${formData.image}` : null"
             @loaded="addToFormData"
         />
@@ -56,8 +70,9 @@ import AInput from '../../ui/form/input/AInput.vue';
 import AText from '../../ui/form/textarea/AText.vue';
 import AButton from '../../ui/button/AButton.vue';
 import TextEditor from '../../ui/editor/TextEditor.vue';
-import UploadFile from '../../ui/upload/UploadFile.vue';
+import UploadImage from '../../ui/upload/UploadImage.vue';
 import RadioButton from '../../ui/form/input/RadioButton.vue';
+import RadioSex from '../../ui/form/input/RadioSex.vue';
 
 export default {
     components: {
@@ -65,8 +80,9 @@ export default {
         AButton,
         AText,
         TextEditor,
-        UploadFile,
+        UploadImage,
         RadioButton,
+        RadioSex,
     },
 
     name: 'ArticleForm',
@@ -90,6 +106,7 @@ export default {
                 content: this.formData.content,
                 seo_title: this.formData.seo_title,
                 seo_description: this.formData.seo_description,
+                is_male: this.formData.is_male,
                 image: this.formData.image,
             });
         },
@@ -103,7 +120,6 @@ export default {
         },
 
         addToFormData(file) {
-            console.log(file);
             this.$emit('imageWasChaged', true);
             this.formData.image = file;
         }

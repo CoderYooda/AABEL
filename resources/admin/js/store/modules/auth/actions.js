@@ -1,4 +1,4 @@
-import { login, logout } from "../../../api/auth";
+import { login, logout, me, refresh } from "../../../api/auth";
 
 export default ({
     async LOGIN({ getters, commit }, authData) {
@@ -27,6 +27,24 @@ export default ({
             }
         } catch (error) {
             commit('SET_ERRORS', error.response.data);
+        }
+    },
+
+    async ME({ getters, commit }) {
+        try {
+            await me(getters.TOKEN);
+            return true;
+        } catch (error) {
+            return false;
+        }
+    },
+
+    async REFRESH({ getters, commit }) {
+        try {
+            await refresh(getters.TOKEN);
+            return true;
+        } catch (error) {
+            return false;
         }
     },
 });

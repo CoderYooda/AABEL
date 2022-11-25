@@ -1,0 +1,28 @@
+.dont-do {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    
+    .container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    &__text {
+        flex: 1 1 50%;
+    }
+
+    &__title {
+    }
+
+    &__list {
+        padding-left: 16px;
+    }
+
+    &__image {
+        flex: 1 1 50%;
+        min-width: 280px;
+        max-width: 500px;
+    }
+}

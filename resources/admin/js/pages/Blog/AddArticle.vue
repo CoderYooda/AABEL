@@ -35,13 +35,14 @@ export default {
                 content: null,
                 seo_title: null,
                 seo_description: null,
+                is_male: 1,
                 image: null,
             }
         }
     },
 
     computed: {
-        ...mapGetters('blog', ['BLOGS', 'HAS_ERRORS', 'ERRORS']),
+        ...mapGetters('blog', ['HAS_ERRORS', 'ERRORS']),
 
         errors() {
             return this.ERRORS;
@@ -54,7 +55,7 @@ export default {
         async addArticle(data) {
             const isSuccess = await this.ADD_ARTICLE(data);
             if (isSuccess) {
-                this.$router.push({ name: 'blog' })
+                this.$router.push({ name: 'blog' });
             }
         },
     },

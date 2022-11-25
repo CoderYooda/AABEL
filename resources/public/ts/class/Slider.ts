@@ -14,7 +14,7 @@ export class Slider {
     init() {
         this.slider = new Swiper('#slider', {
             modules: [Navigation, Keyboard, EffectCoverflow, Parallax, A11y],
-            slidesPerView: 1,
+            slidesPerView: 3,
             loop: true,
             grabCursor: true,
             centeredSlides: true,
@@ -35,7 +35,7 @@ export class Slider {
                 pageUpDown: true,
             },
 
-            effect: 'coverflow',
+            // effect: 'coverflow',
 
             coverflowEffect: {
                 rotate: 140,

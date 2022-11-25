@@ -12,13 +12,41 @@
 <body>
     <!-- Header-->
     <header class="main-header">
-        <div class="container"></div>
+        <div class="container">
+            <a
+                href="/"
+                class="main-header__logo"
+            >
+                <img
+                    src="/icons/logo.png"
+                    alt="Логотип"
+                >
+            </a>
+
+            <ul class="main-header__contacts">
+                <li class="main-heade__contact">
+                    <a href="tel:+79876543210" class="main-header__phone">
+                        +7(987)654-32-10
+                    </a>
+                </li>
+                
+                <li class="main-heade__contact">
+                    <a href="tel:+79876543210" class="main-header__phone">
+                        +7(987)654-32-10
+                    </a>
+                </li>
+
+                <li class="main-heade__contact">
+                    <a href="tel:+79876543210" class="main-header__phone">
+                        +7(987)654-32-10
+                    </a>
+                </li>
+            </ul>
+        </div>
     </header>
 
     <!-- Content -->
-    <main>
-        @yield('content')
-    </main>
+    @yield('content')
 
     <!-- Footer-->
     <footer class="main-footer">

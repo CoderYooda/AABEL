@@ -13,12 +13,28 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex';
 import MainNav from '../components/layout/MainNav/MainNav.vue';
 
 export default {
     name: 'Main',
 
-    components: { MainNav }
+    components: { MainNav },
+
+    methods: {
+        ...mapActions('auth', ['ME']),
+
+        async me() {
+            await this.ME();
+        }
+    },
+
+    async mounted() {
+        const isMe = await this.ME();
+        if (!isMe) {
+            this.$router.push({ name: 'login' })
+        }
+    },
 }
 </script>
 

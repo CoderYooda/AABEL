@@ -8,10 +8,16 @@
     &__form {
         display: flex;
         flex-direction: column;
-        // align-items: flex-start;
         justify-content: flex-start;
         gap: 20px;
         margin-top: 20px;
+    }
+
+    &__sex {
+        display: flex;
+        gap: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
 
     &__btn {

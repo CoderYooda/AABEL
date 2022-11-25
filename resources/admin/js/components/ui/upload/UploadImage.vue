@@ -8,7 +8,7 @@
 
 <script>
 export default {
-    name: 'UploadFile',
+    name: 'UploadImage',
 
     props: {
         imageUrl: {
@@ -40,19 +40,13 @@ export default {
                 this.showPreview = true;
                 this.imagePreview = reader.result;
             }, false);
-            if( this.file ){
-                if ( /\.(jpe?g|png|gif)$/i.test( this.file.name ) ) {
-                    reader.readAsDataURL( this.file );
+            if(this.file){
+                if (/\.(jpe?g|png|gif)$/i.test(this.file.name) ) {
+                    reader.readAsDataURL(this.file);
                     this.$emit('loaded', this.file);
                 }
             }
         },
     },
-
-    mounted() {
-        if (this.imageUrl) {
-
-        }
-    }
 }
 </script>
