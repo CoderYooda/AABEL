@@ -19,6 +19,7 @@ class CreateBlogTable extends Migration
             $table->text('content')->nullable();
             $table->string('seo_title')->default('Нет SEO заголовка');
             $table->text('seo_description')->nullable();
+            $table->boolean('is_male')->default(true);
             $table->string('image')->nullable();
             $table->timestamps();
         });
