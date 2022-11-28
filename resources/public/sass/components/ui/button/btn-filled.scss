@@ -1,0 +1,21 @@
+.btn-filled {
+    padding: 12px 20px;
+    @include font($white, 16px, 16px, 400);
+    background-color: $primary;
+    border-radius: 8px;
+    transition: $transition;
+
+    &:hover,
+    &:focus {
+        box-shadow: 0 0 30px -6px $primary;
+    }
+
+    &.danger {
+        background-color: $danger;
+    }
+
+    &.disabled {
+        opacity: .5;
+        pointer-events: none;
+    }
+}

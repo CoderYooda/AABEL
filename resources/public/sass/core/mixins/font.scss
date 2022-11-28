@@ -3,7 +3,7 @@
     @if $font-family == 'Arial' {
         font-family: $font-family-arial;
     } @else {
-        font-family: $font-family-raleway;
+        font-family: $font-family-montserrat;
     }
     @if $color != '' {
         color: $color;

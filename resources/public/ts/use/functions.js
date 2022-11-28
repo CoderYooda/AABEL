@@ -10,19 +10,19 @@ export function convertToFormData(data) {
     return formData;
 }
 
-export function dateFormatting(options) {
+export function dateFormatting(options, countryFormat="ru") {
     const date = options.date;
-    const language = document.documentElement.getAttribute('lang');
+    // const language = document.documentElement.getAttribute('lang');
     
-    let countryFormat;
+    // let countryFormat;
     
-    switch (language) {
-        case 'en':
-            countryFormat = 'en-US';
-            break;
-        default:
-            countryFormat = 'ru';
-    }
+    // switch (language) {
+    //     case 'en':
+    //         countryFormat = 'en-US';
+    //         break;
+    //     default:
+    //         countryFormat = 'ru';
+    // }
     
     let formatter = new Intl.DateTimeFormat(countryFormat, {
         weekday: options.weekday ?? undefined,

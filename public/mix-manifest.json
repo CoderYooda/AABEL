@@ -9,6 +9,10 @@
     "/images/divider-1.png": "/images/divider-1.png",
     "/images/divider-2.png": "/images/divider-2.png",
     "/images/email-bg.jpg": "/images/email-bg.jpg",
+    "/images/header.png": "/images/header.png",
+    "/images/header2.png": "/images/header2.png",
+    "/images/header3.png": "/images/header3.png",
+    "/images/header4.png": "/images/header4.png",
     "/images/logo.png": "/images/logo.png",
     "/images/man.png": "/images/man.png",
     "/images/no-image.svg": "/images/no-image.svg",
@@ -21,7 +25,5 @@
     "/fonts/Montserrat/Montserrat-Bold.woff2": "/fonts/Montserrat/Montserrat-Bold.woff2",
     "/fonts/Montserrat/Montserrat-Regular.ttf": "/fonts/Montserrat/Montserrat-Regular.ttf",
     "/fonts/Montserrat/Montserrat-Regular.woff": "/fonts/Montserrat/Montserrat-Regular.woff",
-    "/fonts/Montserrat/Montserrat-Regular.woff2": "/fonts/Montserrat/Montserrat-Regular.woff2",
-    "/images/header.png": "/images/header.png",
-    "/images/header2.png": "/images/header2.png"
+    "/fonts/Montserrat/Montserrat-Regular.woff2": "/fonts/Montserrat/Montserrat-Regular.woff2"
 }

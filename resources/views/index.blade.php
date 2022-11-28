@@ -5,13 +5,24 @@
     <section class="about">
         <div class="container">
             <article class="about__text">
-                <h2 class="about__title">О нас</h2>
+                <h2 class="about__title">
+                    АА?
+                </h2>
 
                 <p class="about__description">
-                    АНОНИМНЫЕ АЛКОГОЛИКИ®  это Содружество, объединяющее мужчин и женщин, которые делятся друг с другом своим опытом, силами и надеждами с целью помочь себе и другим избавиться от алкоголизма.
-                    Единственное условие для членства в АА это желание бросить пить. Члены АА не платят ни вступительных, ни членских взносов. Мы сами себя содержим благодаря нашим добровольным пожертвованиям.
+                    АНОНИМНЫЕ АЛКОГОЛИКИ®  это Содружество, объединяющее мужчин и женщин, которые делятся друг с другом своим опытом, силами и надеждами с целью <span>помочь себе и другим</span> избавиться от алкоголизма.
+                </p>
+
+                <p class="about__description">
+                    Единственное условие для членства в АА это желание <span>бросить пить</span>. Члены АА не платят ни вступительных, ни членских взносов. Мы сами себя содержим благодаря нашим добровольным пожертвованиям.
+                </p>
+
+                <p class="about__description">
                     АА не связано ни с какой сектой, вероисповеданием, политическим направлением, организацией или учреждением; стремится не вступать в полемику по каким бы то ни было вопросам, не поддерживает и не выступает против чьих бы то ни было интересов.
-                    Наша главная цель – оставаться трезвыми и помочь другим алкоголикам обрести трезвость.
+                </p>
+
+                <p class="about__description">
+                    Наша <span>главная цель</span> – оставаться трезвыми и помочь другим алкоголикам обрести трезвость.
                 </p>
             </article>
 
@@ -29,7 +40,7 @@
 
             <article class="dont-do__text">
                 <h2 class="dont-do__title">
-                    Чем не занимается АА
+                    АА не занимается
                 </h2>
 
                 <ol class="dont-do__list">
@@ -91,30 +102,41 @@
 
     <section class="blog">
         <div class="container">
-            <h2>Блог</h2>
+            <h2 class="blog__title">
+                Блог
+            </h2>
 
-            <div
-                id="slider"
-                class="blog__slider swiper"
-            >
-                {!!  \App\Http\Controllers\BlogController::getRandom(3) !!}
-                
-                <!-- Buttons -->
-                <div class="blog__buttons">
-                    <button
-                        class="blog__button blog__button-prev swiper-button-prev"
-                        aria-label="Предыдущий слайд"    
-                    ></button>
-                    
-                    <button
-                        class="blog__button blog__button-next swiper-button-next"
-                        aria-label="Следующий слайд"    
-                    ></button>
-                </div>
-            </div>
+            {!!  \App\Http\Controllers\BlogController::getRandom(3) !!}
         </div>
-        
+    </section>
 
+    <section class="questions">
+        <div class="container">
+            <h2 class="questions__title">
+                Вопросы
+            </h2>
+
+            <ul class="questions__list">
+                <li
+                    class="questions__item"
+                    data-accordion
+                >
+                    <button
+                        class="questions__btn"
+                        data-accordion-control
+                    >
+                        question of trust
+                    </button>
+                    
+                    <div
+                        class="questions__content"
+                        data-accordion-content
+                    >
+                        This answer of question
+                    </div>
+                </li>
+            </ul>
+        </div>
     </section>
 </main>
 @endsection
