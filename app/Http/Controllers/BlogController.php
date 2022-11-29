@@ -76,7 +76,7 @@ class BlogController extends Controller
             $path = request()->file('image')->storeAs('photos', $fileStore);
         }
 
-        Blog::whereId(request('id'))->update(array_merge($validated, ['image' => $path]));
+        Blog::whereId(request('id'))->update(array_merge($validated, ['image' => $path, 'is_male' => request('is_male')]));
 
         return response()->json([
             'status' => 'OK',
@@ -102,7 +102,7 @@ class BlogController extends Controller
             $path = request()->file('image')->storeAs('photos', $fileStore);
         }
 
-        $blog = new Blog($validated);
+        $blog = new Blog(array_merge($validated, ['is_male' => request('is_male')]));
         $blog->image = $path;
         $blog->save();
 
