@@ -1,6 +1,10 @@
 .dont-do {
-    padding-top: 100px;
-    padding-bottom: 30px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    @media (min-width: $md) {
+        padding-top: 100px;
+    }
     
     .container {
         display: flex;
@@ -22,7 +26,12 @@
     &__title {
         position: relative;
         margin-bottom: 70px;
-        @include font($primary, 60px, 60px, 700);
+        @include font($primary, 40px, 40px, 700);
+
+        @media (min-width: $md) {
+            font-size: 60px;
+            line-height: 60px;
+        }
 
         &:before,
         &:after {
@@ -36,15 +45,23 @@
         &:before {
             top: 110%;
             left: 10px;
-            width: 350px;
+            width: 250px;
             transform: rotate(-2deg);
+
+            @media (min-width: $md) {
+                width: 350px;
+            }
         }
 
         &:after {
             top: 130%;
             left: 40px;
-            width: 400px;
+            width: 280px;
             transform: rotate(-3deg);
+
+            @media (min-width: $md) {
+                width: 400px;
+            }
         }
     }
 
@@ -115,10 +132,15 @@
 
     &__image {
         position: relative;
+        display: none;
         flex: 1 1 50%;
         order: 1;
         min-width: 280px;
         max-width: 500px;
+
+        @media (min-width: $md) {
+            display: block;
+        }
 
         @media(min-width: $lg) {
             order: 0;

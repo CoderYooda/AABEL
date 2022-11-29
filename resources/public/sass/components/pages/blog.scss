@@ -1,9 +1,13 @@
 .blog {
-    padding-top: 50px;
+    padding-top: 30px;
     padding-bottom: 50px;
+    
+    @media (min-width: $md) {
+        padding-top: 50px;
+    }
 
     @media(min-width: $lg) {
-        padding-top: 100px;
+        padding-top: 60px;
     }
     
     .container {
@@ -12,29 +16,46 @@
     &__title {
         position: relative;
         margin-bottom: 70px;
-        @include font($primary, 100px, 100px, 700);
+        @include font($primary, 80px, 80px, 700);
+
+        @media (min-width: $md) {
+            font-size: 100px;
+            line-height: 100px;
+        }
 
         &:before,
         &:after {
             content: "";
             position: absolute;
-            height: 6px;
+            height: 4px;
             background-color: $primary;
             border-radius: 10px;
+
+            @media (min-width: $md) {
+                height: 6px;
+            }
         }
         
         &:before {
             top: 110%;
             left: 10px;
-            width: 350px;
+            width: 250px;
             transform: rotate(2deg);
+
+            @media (min-width: $md) {
+                width: 350px;
+            }
         }
 
         &:after {
             top: 130%;
             left: 40px;
-            width: 400px;
+            width: 280px;
             transform: rotate(3deg);
+
+            @media (min-width: $md) {
+                width: 400px;
+            }
         }
     }
 

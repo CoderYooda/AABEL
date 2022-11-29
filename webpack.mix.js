@@ -12,6 +12,7 @@ mix.js('resources/admin/js/app.js', 'js/admin').vue()
 mix.copyDirectory('resources/assets/images', 'public/images');
 mix.copyDirectory('resources/assets/icons', 'public/icons');
 mix.copyDirectory('resources/assets/fonts', 'public/fonts');
+mix.copyDirectory('resources/public/ts/modules', 'public/js/modules');
 
 if(mix.inProduction() ) {
     mix.version();

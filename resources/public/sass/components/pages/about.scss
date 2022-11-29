@@ -1,6 +1,10 @@
 .about {
-    padding-top: 100px;
+    padding-top: 70px;
     padding-bottom: 30px;
+
+    @media (min-width: $md) {
+        padding-top: 100px;
+    }
     
     .container {
         display: flex;
@@ -29,30 +33,48 @@
 
     &__title {
         position: relative;
-        margin-bottom: 70px;
-        @include font($primary, 150px, 150px, 700);
+        margin-bottom: 50px;
+        @include font($primary, 90px, 90px, 700);
+
+        @media (min-width: $md) {
+            margin-bottom: 70px;
+            font-size: 150px;
+            line-height: 150px;
+        }
 
         &:before,
         &:after {
             content: "";
             position: absolute;
-            height: 7px;
+            height: 5px;
             background-color: $primary;
             border-radius: 10px;
+
+            @media (min-width: $md) {
+                height: 7px;
+            }
         }
 
         &:before {
             top: 102%;
             left: 10px;
-            width: 350px;
+            width: 250px;
             transform: rotate(2deg);
+
+            @media (min-width: $md) {
+                width: 350px;
+            }
         }
 
         &:after {
             top: 120%;
             left: 40px;
-            width: 400px;
+            width: 280px;
             transform: rotate(4deg);
+
+            @media (min-width: $md) {
+                width: 400px;
+            }
         }
     }
 
@@ -67,9 +89,14 @@
 
     &__image {
         position: relative;
+        display: none;
         flex: 1 1 50%;
         min-width: 280px;
         max-width: 500px;
+
+        @media (min-width: $md) {
+            display: block;
+        }
 
         &:before {
             content: "";

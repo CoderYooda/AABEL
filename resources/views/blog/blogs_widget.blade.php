@@ -3,11 +3,20 @@
     <li class="blog__item blog__item--{{ $loop->index }} blog_{{$blog->id}}">
         <div class="blog__article-image">
             @if($blog->imageLink() != '/storage/')
-                <img src="{{  $blog->imageLink() }}" alt="">
+                <img
+                    src="{{  $blog->imageLink() }}"
+                    alt="Изображение из статьи блога"
+                >
             @elseif($blog->imageLink() == '/storage/' && $blog->is_male == true)
-                <img src="/images/man.png" alt="">
+                <img
+                    src="/images/man.png"
+                    alt="Силуэт мужчины"
+                >
             @elseif($blog->imageLink() == '/storage/' && $blog->is_male == false)
-                <img src="/images/woman.png" alt="">
+                <img
+                    src="/images/woman.png"
+                    alt="Силуэт женщины"
+                >
             @endif
         </div>
 
@@ -28,8 +37,9 @@
             </div>
 
             <a
-                href="/"
-                class="blog__article-link btn-filled"    
+                href="/blog/{{ $blog->id }}/view"
+                class="blog__article-link btn-filled"
+                aria-label="Перейти на страницу статьи" 
             >
                 Читать
             </a>

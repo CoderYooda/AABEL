@@ -1,7 +1,7 @@
 // === MAIN-HEADER ===
 .main-header {
     border-bottom: 20px dashed $primary;
-    filter: drop-shadow(2px 2px 2px $dark);
+    // filter: drop-shadow(2px 2px 2px $dark);
 
     .container {
         display: flex;
@@ -10,7 +10,7 @@
         justify-content: space-between;
         padding-top: 50px;
         padding-bottom: 20px;
-        background-image: url('/images/header4.png');
+        background-image: url('/images/header.png');
         background-size: cover;
         background-repeat: no-repeat;
         background-position: 50% 0;
