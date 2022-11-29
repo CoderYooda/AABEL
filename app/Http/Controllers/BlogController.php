@@ -14,7 +14,7 @@ class BlogController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth:api',  ['except' => ['get']]);
+        $this->middleware('auth:api',  ['except' => ['get', 'view']]);
     }
 
     public function index()
