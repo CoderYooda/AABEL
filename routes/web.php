@@ -33,6 +33,7 @@ $router->group([
 ], function ($router) {
     $router->post('/store', 'BlogController@store');
     $router->get('/get', 'BlogController@get');
+    $router->get('/{id}/view', 'BlogController@view');
     $router->post('/delete', 'BlogController@delete');
     $router->post('/update', 'BlogController@update');
 });

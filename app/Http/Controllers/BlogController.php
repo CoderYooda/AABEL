@@ -40,6 +40,12 @@ class BlogController extends Controller
         return request()->wantsJson() ? $blogs->toJson() : view('blog.list')->with('blogs', $blogs);
     }
 
+    public function view($id)
+    {
+        $blog = Blog::where('id', $id)->first() ?? abort(404);
+
+        return request()->wantsJson() ? $blog->toJson() : view('blog.view')->with('blog', $blog);
+    }
 
     public function delete()
     {
