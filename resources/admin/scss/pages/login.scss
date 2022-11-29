@@ -1,0 +1,23 @@
+.login {
+    width: 100%;
+    max-width: 330px;
+
+    &__title {
+        @include font($dark, 22px, 22px, 700);
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    &__error {
+        @include font($danger, 12px, 12px, 400);
+    }
+
+    &__btn {
+        
+    }
+}

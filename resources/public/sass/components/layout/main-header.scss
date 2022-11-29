@@ -1,0 +1,72 @@
+// === MAIN-HEADER ===
+.main-header {
+    border-bottom: 20px dashed $primary;
+    filter: drop-shadow(2px 2px 2px $dark);
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 50px;
+        padding-bottom: 20px;
+        background-image: url('/images/header4.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        
+        @media(min-width: $md) {
+            background-size: contain;
+        }
+    }
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 130px;
+        height: 130px;
+        background-color: $white;
+        border-radius: 50%;
+        padding: 5px;
+        filter: drop-shadow(1px 1px 2px $dark-80);
+        transition: $transition;
+
+        &:hover,
+        &:focus {
+            padding: 10px;
+            filter: drop-shadow(1px 1px 5px $dark-80);
+        }
+    }
+
+    &__contacts {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-top: 40px;
+        background-color: $white-80;
+        border-radius: 15px;
+        backdrop-filter: blur(60px);
+    }
+
+    &__phone {
+        display: inline-block;
+        padding: 5px 15px;
+        @include font($dark, 20px, 36px, 700);
+        border-bottom: 3px solid transparent;
+        border-radius: 15px;
+        transition: $transition;
+
+        &:hover,
+        &:focus {
+            background-color: $white-80;
+            box-shadow: 0 0 5px 2px $white-80; 
+        }
+
+        @media(min-width: $lg) {
+            font-size: 30px;
+        }
+    }
+}
+

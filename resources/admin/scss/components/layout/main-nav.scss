@@ -1,0 +1,22 @@
+// === MAIN NAV ===
+.main-nav {
+
+
+    &__list {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+
+    &__item {}
+
+    &__logo {
+        display: inline-block;
+        width: 80px;
+    }
+
+    &__link {
+        padding: 10px 15px;
+        @include font($white, 20px, 20px, 400);
+    }
+}

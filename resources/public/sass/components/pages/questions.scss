@@ -1,0 +1,32 @@
+.questions {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    
+    .container {
+    }
+
+    &__title {
+    }
+
+    &__list {
+    }
+
+    &__item {
+
+
+        &.open .questions__content {
+            opacity: 1;
+        }
+    }
+
+    &__btn {
+    }
+
+    &__content {
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: $transition;
+        will-change: max-height;
+    }
+}

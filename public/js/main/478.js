@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkaabel=self.webpackChunkaabel||[]).push([[478],{478:(e,n,r)=>{r.r(n),r.d(n,{default:()=>a});var t=r(821);const u={};const a=(0,r(744).Z)(u,[["render",function(e,n,r,u,a,l){var o=(0,t.up)("router-link");return(0,t.wg)(),(0,t.j4)(o,{to:"/blog"},{default:(0,t.w5)((function(){return[(0,t.Uk)("Blog")]})),_:1})}]])}}]);

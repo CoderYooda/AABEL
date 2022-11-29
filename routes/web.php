@@ -4,7 +4,12 @@
 
 $router->get('/', 'MainController@index');
 
-$router->get('/admin', 'AdminController@index');
+$router->group([
+    'prefix' => 'admin'
+], function ($router) {
+    $router->get('/', 'AdminController@index');
+    $router->get('/{any:[A-Za-z0-9/]+}', 'AdminController@index');
+});
 
 //$router->group([
 //    'middleware' => 'token'

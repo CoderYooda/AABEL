@@ -1,0 +1,71 @@
+// === COMMON ===
+html {
+    width: auto;
+    margin-right: calc(-1 * (100vw - 100%));
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    transition: $transition;
+    
+    &.locked {
+        overflow: hidden;
+    }
+}
+
+body {
+    background-color: $white;
+
+    &::-webkit-scrollbar {
+        width: 8px;
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 5px;
+        background-color: $primary !important;
+        border: .5px solid $dark !important;
+    }
+
+    &::-webkit-scrollbar-track {
+        border-radius: 5px;
+        background-color: transparent;
+    }
+}
+
+* {
+	scrollbar-color: $primary #fff; /*Цвет скролла, цвет ползунка*/
+	scrollbar-width: thin; /*Толщина скролла thin, auto*/
+}
+
+.container {
+    max-width: $container-width;
+    width: 100%;
+    margin: 0 auto; 
+    padding-right: $container-padding;
+    padding-left: $container-padding;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
+.frame-version {
+    pointer-events: none;
+    user-select: none;
+
+    &::-webkit-scrollbar {
+        width: 0px;
+    }
+}

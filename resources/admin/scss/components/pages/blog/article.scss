@@ -1,0 +1,26 @@
+.article {
+    
+
+    &__title {
+        @include font($dark, 30px, 30px, 700);
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    &__sex {
+        display: flex;
+        gap: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    &__btn {
+        align-self: flex-start;
+    }
+}

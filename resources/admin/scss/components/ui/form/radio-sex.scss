@@ -1,0 +1,70 @@
+$radio-width: 200px;
+$radio-height: $radio-width;
+
+$radio-color-1: $dark;
+$radio-color-2: $dark;
+$radio-color-3: $primary;
+$radio-bg-1: $white;
+
+.radio-sex {
+    display: flex;
+    align-items: center;
+
+    &:hover,
+    &:focus {
+        .radio-sex__decor:before {
+            border-color: $radio-color-2;
+        }
+
+        .radio-sex__input:checked + .radio-sex__decor:before {
+            border-color: $radio-color-3;
+        }
+    }
+
+    &__wrapper {
+        position: relative;
+        width: $radio-width;
+        height: $radio-height;
+    }
+
+    &__input {
+        display: none;
+
+        &:checked + .radio-sex__decor {
+            filter: drop-shadow(0px 0px 15px $primary);
+        }
+    }
+
+    &__decor {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        display: block;
+        width: $radio-width;
+        height: $radio-height;
+        background-size: contain;
+        background-repeat: no-repeat;
+        transition: .2s linear;
+        cursor: pointer;
+
+        &--male {
+            background-image: url('/images/man.png');
+        }
+        
+        &--female {
+            background-image: url('/images/woman.png');
+        }
+    }
+
+    &__label {
+        margin-left: 8px;
+        @include font($dark, 14px, 20px, 400);
+        cursor: pointer;
+    }
+
+    &--disabled {
+        pointer-events: none;
+        opacity: .4;
+    }
+}

@@ -1,0 +1,32 @@
+.a-input {
+
+    &.error {
+        .a-input__input {
+            border-color: $danger;
+        }
+    }
+
+    &__label {
+        @include font($dark, 16px, 16px, 400);
+    }
+
+    &__input {
+        width: 100%;
+        margin-top: 5px;
+        padding: 15px;
+        @include font($dark, 14px, 14px, 400);
+        background-color: $primary-06;
+        border: 1px solid $inactive-form;
+        border-radius: 8px;
+        resize: none;
+
+        &:placeholder {
+            color: $inactive-form;
+        }
+    }
+
+    &__error {
+        margin-top: 5px;
+        @include font($danger, 12px, 12px, 400);
+    }
+}
