@@ -2,6 +2,7 @@
 
 @section('content')
 <main data-component="Main">
+    <!-- About -->
     <section class="about">
         <div class="container">
             <article class="about__text">
@@ -27,7 +28,7 @@
             </article>
 
             <div class="about__image">
-                <img src="/images/no-image.svg" alt="">
+                <img src="/images/about.jpg" alt="">
             </div>
         </div>
     </section>
@@ -35,7 +36,7 @@
     <section class="dont-do">
         <div class="container">
             <div class="dont-do__image">
-                <img src="/images/no-image.svg" alt="">
+                <img src="/images/dont-do.jpg" alt="">
             </div>
 
             <article class="dont-do__text">
@@ -117,6 +118,25 @@
             </h2>
 
             <ul class="questions__list">
+                <li
+                    class="questions__item"
+                    data-accordion
+                >
+                    <button
+                        class="questions__btn"
+                        data-accordion-control
+                    >
+                        question of trust
+                    </button>
+                    
+                    <div
+                        class="questions__content"
+                        data-accordion-content
+                    >
+                        This answer of question
+                    </div>
+                </li>
+
                 <li
                     class="questions__item"
                     data-accordion
