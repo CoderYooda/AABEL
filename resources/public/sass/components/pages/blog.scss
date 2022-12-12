@@ -140,6 +140,7 @@
 
         .blog__article-content {
             position: relative;
+            min-height: 95px;
             max-height: 95px;
             margin-top: 30px;
             overflow: hidden;
@@ -208,5 +209,10 @@
                 }
             }
         }
+    }
+
+    &__empty {
+        margin-top: 30px;
+        @include font($dark, 30px, 40px, 700);
     }
 }

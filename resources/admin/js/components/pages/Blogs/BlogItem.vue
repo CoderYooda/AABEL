@@ -1,8 +1,10 @@
 <template>
-    <li
-        class="articles__item"
-        :style="{ backgroundImage: articleData.image ? `url('/storage/${ articleData.image }')` : 'url(/images/no-image.svg)' }"
-    >
+    <li class="articles__item">
+        <div
+            class="articles__item-img"
+            :style="{ backgroundImage: imgSrc }"
+        ></div>
+
         <div class="articles__text">
             <h4 class="articles__item-title">
                 {{ articleData.title }}
@@ -60,6 +62,19 @@ export default {
     },
 
     emits: ['removeArticle'],
+
+    computed: {
+        imgSrc() {
+            console.log(this.articleData.image);
+            if (this.articleData.image) {
+                return `url('/storage/${ this.articleData.image }')`;
+            } else if (!this.articleData.image && this.articleData.is_male) {
+                return `url('/images/man.png')`;
+            } else if (!this.articleData.image && !this.articleData.is_male) {
+                return `url('/images/woman.png')`;
+            }
+        }
+    },
 
     methods: {
         removeArticle() {

@@ -17,8 +17,6 @@ $router->group([
 //    $router->post('/admin/login', 'UserController@login');
 //});
 
-
-
 $router->group([
     'prefix' => 'auth'
 ], function ($router) {

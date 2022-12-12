@@ -1,0 +1,27 @@
+.article {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+
+        @media (min-width: $md) {
+            grid-template-columns: minmax(280px, 400px) 1fr;
+        }
+    }
+
+    &__title {
+        @include font($dark, 25px, 27px, 700);
+    }
+
+    &__img {
+        grid-row: 1 / 3;
+        grid-column: 1 / 2;
+    }
+
+    &__content {
+        // margin-top: 30px;
+    }
+}

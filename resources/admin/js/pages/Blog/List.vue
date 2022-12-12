@@ -14,7 +14,9 @@
         </div>
 
         <template v-if="!IS_LOADING">
-            <ul class="articles__list">
+            <ul
+                class="articles__list"
+            >
                 <blog-item
                     v-for="article in blog"
                     :key="article.id"

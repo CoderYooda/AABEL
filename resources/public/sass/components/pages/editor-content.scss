@@ -1,0 +1,31 @@
+.editor-content {
+    .ql-align-center {
+        text-align: center;
+    }
+
+    .ql-align-left {
+        text-align: left;
+    }
+
+    .ql-align-right {
+        text-align: right;
+    }
+
+    p {
+        @include font($dark, 20px, 23px, 400);
+    }
+
+    ul {
+        padding-left: 30px;
+        list-style: disc;
+        @include font($dark, 20px, 23px, 400);
+    }
+
+    ol {
+        padding-left: 30px;
+        list-style: decimal;
+        @include font($dark, 20px, 23px, 400);
+    }
+
+    li {}
+}

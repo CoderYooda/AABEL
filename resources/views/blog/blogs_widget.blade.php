@@ -1,3 +1,4 @@
+@if (count($blogs) > 0)
 <ul class="blog__list">
     @foreach($blogs as $blog)
     <li class="blog__item blog__item--{{ $loop->index }} blog_{{$blog->id}}">
@@ -32,7 +33,7 @@
                 {{ $blog->created_at }}
             </span>
             
-            <div class="blog__article-content">
+            <div class="editor-content blog__article-content">
                 {!! $blog->content !!}
             </div>
 
@@ -47,3 +48,8 @@
     </li>
     @endforeach
 </ul>
+@else
+<p class="blog__empty">
+    На данный момент статей нет
+</p>
+@endif

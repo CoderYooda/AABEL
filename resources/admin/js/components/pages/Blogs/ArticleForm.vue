@@ -37,20 +37,21 @@
         <div class="article__sex">
             <radio-sex
                 id="male"
-                value="1"
+                :value="1"
                 sex="male"
                 v-model="formData.is_male"
             />
             
             <radio-sex
                 id="female"
-                value="0"
+                :value="0"
                 sex="female"
                 v-model="formData.is_male"
             />
         </div>
 
         <upload-image
+            class="article__img"
             :imageUrl="formData.image ? `/storage/${formData.image}` : null"
             @loaded="addToFormData"
         />

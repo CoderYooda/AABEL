@@ -24,13 +24,16 @@
     &__item {
         position: relative;
         max-width: 300px;
+    }
+
+    &__item-img {
         height: 200px;
         width: 100%;
         background-size: cover;
     }
     
     &__text {
-        position: absolute;
+        // position: absolute;
         bottom: 0;
         left: 0;
         display: flex;
@@ -43,7 +46,7 @@
     }
 
     &__item-title {
-        @include font($white, 22px, 22px, 700);
+        @include font($white, 18px, 22px, 400);
     }
 
     // &__description {}
